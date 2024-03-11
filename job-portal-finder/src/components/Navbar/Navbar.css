@@ -1,0 +1,26 @@
+.main-nav {
+    width: 100%;
+    display: flex;
+    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      background-color:#007254;
+   padding: 20px;
+   justify-content: space-around;
+   align-items: center;
+  }
+
+  .logo {
+    display: grid;
+    grid-column: 2/3;
+    justify-content: start;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+    border: none;
+  }
+  @media (max-width: 900px) {
+    a{
+        font-size: 75% !important;
+    }
+  }
