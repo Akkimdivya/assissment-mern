@@ -5,7 +5,6 @@ import path from 'path';
 import fs from 'fs';
 import { MongoClient, ServerApiVersion, ObjectId } from 'mongodb';
 import multer from 'multer';
-import mongoose from 'mongoose';
 
 dotenv.config();
 
