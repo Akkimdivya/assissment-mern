@@ -6,12 +6,12 @@ body{
 
 .active{
   color: #020811;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 a {
   text-decoration: none;
-  color: rgb(215, 204, 204);
+  color: rgb(109, 102, 102);
 }
 
 li {

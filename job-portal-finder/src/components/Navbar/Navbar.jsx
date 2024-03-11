@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <header>
         <nav className='main-nav'>
-            <a href='/'><img src="https://humgrow.com/wp-content/uploads/2021/03/cropped-Building-Careers.-4-1024x251.png" className='logo'/></a>
+            <a href='/'><img src="https://humgrow.com/wp-content/uploads/2024/02/cropped-Building-Careers.-3-1024x239.png" className='logo'/></a>
             {/* nav items */}
             <div>
             <ul className='hidden md:flex gap-6 space'>
@@ -47,11 +47,12 @@ const Navbar = () => {
             </ul>
             </div>
 
-           {/* Signup and login */}
+           {/* Signup and login 
            <div className='text-base text-primary font-medium space-x-5 hidden md:block '>
               <Link to='/login' className='py-2 px-5 border rounded'>Log in</Link>
               <Link to='/sign-up'className='py-2 px-5 border rounded bg-primary text-white'>Sign up</Link>
             </div>
+            */}
            
             {/*mobile menu*/}
             <div className='md:hidden block'>
@@ -81,12 +82,14 @@ const Navbar = () => {
                   </li>
                 ))
               }
+              {/*
               <li className='py-1'>
                 <Link to='/login'>Log in</Link>
               </li>
               <li className='py-1'>
                 <Link to='/signup'>Sign Up</Link>
               </li>
+            */}
           </ul>
         </div>
     </header>

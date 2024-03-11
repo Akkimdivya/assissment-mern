@@ -26,7 +26,7 @@ const Create = () => {
             formData.append('resume', data.resume[0]);
         }
     
-        fetch("http://localhost:5000/post-jobApplication/", {
+        fetch("https://assissment-mern.onrender.com/post-jobApplication/", {
             method: "POST",
             body: formData  // Send form data as FormData
         })

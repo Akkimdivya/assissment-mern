@@ -14,7 +14,7 @@ const MyJobs = () => {
 
   useEffect(()=>{
     setIsLoading(true)
-    fetch('http://localhost:5000/myJobs/Akiuhk@gmai.com/').then(res=>res.json()).then(data=>{
+    fetch('https://assissment-mern.onrender.com/myJobs/Akiuhk@gmai.com/').then(res=>res.json()).then(data=>{
       setJobs(data)
       setIsLoading(false)
     })

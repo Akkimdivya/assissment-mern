@@ -10,7 +10,7 @@ const JobDetails = () => {
   
   useEffect(()=>{
     setIsLoading(true)
-    fetch(`http://localhost:5000/all-jobs/${id}`).then(res=>res.json()).then(data=>{
+    fetch(`https://assissment-mern.onrender.com/all-jobs/${id}`).then(res=>res.json()).then(data=>{
       setJobs(data)
       setIsLoading(false)
     })
