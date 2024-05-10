@@ -3,7 +3,7 @@ import Banner from '../components/Banner'
 import {useState} from "react";
 import Card from '../components/Card';
 import Jobs from './Jobs';
-import Sidebar from '../sidebar/Sidebar';
+//import Sidebar from '../sidebar/Sidebar';
 import Newletter from '../components/Newletter';
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
   //job filter
 
   const filteredItems=jobs.filter(
-    (job)=>job.jobTitle.toLowerCase().indexOf(query.toLowerCase())!==-1)  ;
+    (job)=>job.jobTitle)  ;
   
   
   //radio filter
@@ -74,12 +74,12 @@ const Home = () => {
     if(selected){
       filterJobs=filterJobs.filter(({jobLocation,maxPrice,
         experienceLevel,salaryType,employmentType,postingDate})=>
-          jobLocation.toLowerCase()===selected.toLowerCase()||
+          jobLocation===selected||
           parseInt(maxPrice)<=parseInt(selected)||
           parseInt(postingDate)<=parseInt(selected)||
-          salaryType.toLowerCase()===selected.toLowerCase()||
-          employmentType.toLowerCase()===selected.toLowerCase()||
-          experienceLevel.toLowerCase()===selected.toLowerCase()
+          salaryType===selected||
+          employmentType===selected||
+          experienceLevel===selected
         );
       //console.log(filterJobs)
     }
@@ -98,11 +98,13 @@ const Home = () => {
       <Banner query={query} handleInputChange={handleInputChange} />
        {/*Main content*/}
        <div className='bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'>
-        {/*Left card*/}
+        {/*Left card
         <div className='bg-white p-4 rounded'>
           <Sidebar handleChange={handleChange} handleClick={handleClick}/>
           </div>
-        {/*Job card*/}
+         
+        Job card*/}
+        <div className='bg-white p-4 rounded'><Newletter/></div> 
         <div className='col-span-2 bg-white rounded '>
           {
             isLoading?(<p>Loading...</p>):result.length>0 ? (<Jobs result={result}/>):
@@ -126,7 +128,7 @@ const Home = () => {
           
         </div>
         {/*Right card*/}
-        <div className='bg-white p-4 rounded'><Newletter/></div>
+        
        </div>
     </div>
   )
